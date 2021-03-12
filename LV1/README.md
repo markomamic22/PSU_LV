@@ -1,0 +1,1 @@
+Upoznavanje s pythonom i git sustavom
