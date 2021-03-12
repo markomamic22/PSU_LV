@@ -13,14 +13,8 @@ for line in fhand:
         atstart = mail.find("@")
         hostname = mail[(atstart+1):]
         mailing_list.append(mail)
-        
-        
-         
-       
 
-i = 0        
+
+i = 0
 for i in range(len(mailing_list)):
     print(mailing_list[i])
-
-
-
