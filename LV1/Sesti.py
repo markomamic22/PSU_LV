@@ -23,7 +23,6 @@ for line in fhand:
                 mailing_list.append(mail)
 
 
-
 for i in range(len(mailing_list)):
     line = mailing_list[i]
     start_at = line.find("@")
@@ -38,5 +37,5 @@ i = 0
 for i in range(3):
     print(mailing_list[i])
 print("\nBroj ponavljanja hostnamea:")
-for x,y in hostname_dictionary.items():
-    print (x,":",y)
+for x, y in hostname_dictionary.items():
+    print(x, ":", y)
