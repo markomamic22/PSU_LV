@@ -17,3 +17,25 @@ average_mpg = np.average(data[:,0])
 print("Maksimalna vrijednost mpg je: ",max_mpg)
 print("Minimalna vrijednost mpg je: ", min_mpg)
 print("Srednja vrijednost mpg je: ", average_mpg)
+
+i=0
+indexes = []
+for i in range(len(data[:,1])):
+    if data[i,1]==6:
+        indexes.append(i)
+
+i=0
+max_6 = 0
+min_6 = max_mpg
+sum_6 = 0
+
+for i in range(len(indexes)):
+    if data[indexes[i],0] > max_6:
+        max_6 = data[indexes[i],0]
+    elif data[indexes[i],0] <min_6:
+        min_6 = data[indexes[i],0]
+    sum_6 += data[indexes[i],0]
+
+print("Max vrijednost 6 cilindra mpg je: ", max_6)
+print("Min vrijednost 6 cilindra mpg je: ", min_6)
+print("Srednja vrijednost 6 cilindra mpg je: ", (sum_6/len(indexes)))
