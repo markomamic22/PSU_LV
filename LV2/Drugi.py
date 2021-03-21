@@ -22,7 +22,6 @@ for i in range(100):
     elif(v[i]==6):
         counter[5] += 1     
         
-
-plt.hist(v, bins=6)
+plt.hist(v, bins=np.linspace(1,6), align='mid', ec='b')
 plt.show()    
 
