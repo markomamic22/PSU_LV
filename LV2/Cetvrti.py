@@ -1,3 +1,4 @@
+from re import X
 import matplotlib.pyplot as plt
 import numpy as np
 import skimage.io
@@ -22,4 +23,10 @@ for i in range(row):
 
 
 plt.imshow(img, cmap='gray', vmin=0, vmax=255)
+plt.show()
+img2 = np.zeros((col,row))
+for j in range(row):
+    img2[:,row-1-j] = img[j,:]
+
+plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
 plt.show()
