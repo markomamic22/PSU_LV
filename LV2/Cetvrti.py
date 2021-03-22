@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import skimage.io
 import os
+from skimage.transform import resize
 
 from skimage.util.dtype import img_as_bool
 os.chdir("LV2")
@@ -31,7 +32,12 @@ for j in range(row):
 plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
 plt.show()
 
-for j in range(row):
+for j in range(row): #zrcaljenje
     img2[:,j] = img[j,:]
+plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
+plt.show()
+
+#img2 = resize(img2, (300,300))
+img2 = img2[::5,::5]
 plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
 plt.show()
