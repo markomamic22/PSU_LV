@@ -30,3 +30,8 @@ for j in range(row):
 
 plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
 plt.show()
+
+for j in range(row):
+    img2[:,j] = img[j,:]
+plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
+plt.show()
