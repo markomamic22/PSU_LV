@@ -4,9 +4,11 @@ from skimage import color
 import matplotlib.image as mpimg
 import numpy as np
 import joblib
+import os
 
 # ucitaj sliku i prikazi ju
-filename = 'test.png'
+os.chdir("LV6")
+filename = 'Screenshot_6.png'
 
 img = mpimg.imread(filename)
 img = color.rgb2gray(img)
@@ -18,7 +20,7 @@ plt.show()
 
 
 # TODO: prebacite sliku u vektor odgovarajuce velicine
-
+img.resize(1,28*28)
 
 # vrijednosti piksela kao float32
 img = img.astype('float32')
@@ -29,6 +31,5 @@ mlp_mnist = joblib.load(filename)
 
 # TODO: napravi predikciju i spremi u varijablu digit kao string
 
-
 print("------------------------")
-print("Slika sadrzi znamenku: ", label)
+print("Slika sadrzi znamenku: ", mlp_mnist.predict(img))
