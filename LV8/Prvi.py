@@ -70,7 +70,7 @@ model.summary()
 # TODO: definiraj karakteristike procesa ucenja pomocu .compile()
 # podesavanje parametara procesa ucenja
 model.compile(loss='categorical_crossentropy',
-                optimizer='Nadam',
+                optimizer='adam',
                 metrics=['accuracy'])
 
 # TODO: provedi ucenje mreze
